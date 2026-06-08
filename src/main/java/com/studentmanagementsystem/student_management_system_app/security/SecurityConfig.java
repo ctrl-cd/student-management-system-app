@@ -29,14 +29,13 @@ public class SecurityConfig {
   private final PasswordEncoderArgon2 passwordEncoderArgon2;
   private final FilterCorsCustom filterCorsCustom;
   private final AccessDeniedHandlerExceptionHandling accessDeniedHandlerExceptionHandling;
-  private final OncePerRequestFilterRequestURIAndMethodValidation oncePerRequestFilterRequestURIAndMethodValidation;
+  private final OncePerRequestFilterRequestURI oncePerRequestFilterRequestURI;
 
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     http
             //            .addFilterBefore(filterCorsCustom, ChannelProcessingFilter.class)
-            .addFilterBefore(filterCorsCustom, SecurityContextHolderFilter.class)
-            .addFilterBefore(oncePerRequestFilterRequestURIAndMethodValidation, FilterCorsCustom.class)
+            .addFilterBefore(filterCorsCustom, SecurityContextHolderFilter.class).addFilterBefore(oncePerRequestFilterRequestURI, FilterCorsCustom.class)
             .csrf(csrfConfigurerHttpSecurity -> csrfConfigurerHttpSecurity.disable())
             .sessionManagement(sessionManagementConfigurer -> sessionManagementConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .exceptionHandling(exceptionHandlingConfigurer -> exceptionHandlingConfigurer.authenticationEntryPoint(authenticationEntryPointExceptionHandling)

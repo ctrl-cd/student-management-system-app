@@ -25,6 +25,7 @@ import java.util.Set;
 @RequiredArgsConstructor
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @Component
+//public class OncePerRequestFilterRequestURIAndMethodValidation extends OncePerRequestFilter {
 public class OncePerRequestFilterRequestURI extends OncePerRequestFilter {
 
   private final RequestMappingHandlerMapping requestMappingHandlerMapping;
