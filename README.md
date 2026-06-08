@@ -39,7 +39,20 @@ https://drive.google.com/file/d/19vGdrKnP6qZLxHNSu3Rsd2nUhFyIxZee/view?usp=shari
 https://drive.google.com/file/d/1eGY5VCbrpyXdv7p28wgykqMzXOza17R_/view?usp=sharing
 https://drive.google.com/file/d/1zfMB6hfvhQAlpK7BwL2Hcw6LIT7wGDkW/view?usp=sharing
 
-### 3. Explore the API
+### 4. Open and Run the project
+
+Open IntelliJ IDEA -> Select File from menu -> Open and choose the project -> Select project folder -> Click on
+pom.xml = Let IDEA import the Maven project.
+
+Run the application:
+
+First time = Open
+src/main/java/com/studentmanagementsystem/student_management_system_app/StudentManagementSystemAppApplication.java file
+in the Intellij Idea -> Click on first run button(icon)
+
+Second time = Click on run button(icon)
+
+### 5. Explore the API
 
 Please find the Postman Collection and Postman Environment links attached:
 https://drive.google.com/file/d/1CJysyS8Ivv6tK5ATnOuREMUxjWDZZthX/view?usp=sharing
