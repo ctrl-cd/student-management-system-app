@@ -31,3 +31,15 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Exclude log files and directories
+logs/
+*.log
+
+delete/
+
+# Ignore environment files with secrets
+.env
+.env.*
+
+htmlReport/
